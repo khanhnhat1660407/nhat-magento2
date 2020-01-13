@@ -1,0 +1,35 @@
+<?php
+/**
+ * @var \SM\Promotion\Block\Index\Index $block
+ */
+?>
+<div class="logo-swe">
+    <?php
+        echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('promotion_cms_block') // cms block identifier
+        ->toHtml();
+    ?>
+</div>
+<div class="banner"">
+    <img src="https://cf.shopee.vn/file/a9dfba3e4ea1895d65fdaf7212f3cbe8_xxhdpi" alt="">
+</div>
+<?php echo $this->getLayout()->createBlock("SM\Promotion\Block\Widget\PromotionProduct")
+                             ->setTitle("Promotion Products")
+                             ->setEnableCarousel(0)
+                             ->setNumberOfProduct(10)
+                             ->toHtml();
+?>
+<div class="block">
+    <div class="block-title">
+        <h2 class="title">Promotions</h2>
+    </div>
+    <div class="block-items">
+        <div class="block-item">
+            <div class="item-container">
+                <img src="https://cf.shopee.vn/file/88a0a06d6c054de5ba2bdd82eb93a88a" alt="">
+                <a href="https://shopee.vn/collections/325493" class="promotion-link"></a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="SM\Promotion\Block\Widget\PromotionProduct" id="sm_promotion_product">
+        <label>Promotion Products</label>
+        <description>Show products that are having promotions, discounts</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" visible="true" required="true" sort_order="1">
+                <label>Title</label>
+            </parameter>
+            <parameter name="enable_carousel" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Enabledisable" sort_order="2">
+                <label>Enable Carousel</label>
+            </parameter>
+            <parameter name="number_of_product" xsi:type="text" visible="true" required="true" sort_order="3">
+                <label>Number of Products displayed</label>
+                <value>5</value>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
